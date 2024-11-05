@@ -1,4 +1,4 @@
-package com.example.helloRelative;
+package com.example.hellotoast;
 
 import android.os.Bundle;
 import android.widget.Button;
