@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="100dp"
+    android:background="@android:color/transparent"> <!-- Optional: Ensure no background -->
 
-    <FrameLayout
-        android:layout_width="349dp"
-        android:layout_height="507dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical">
+    <!-- Toast Button at the top -->
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="test"
+        android:textSize="20sp"
+        app:cornerRadius="0dp"
+        android:layout_gravity="top"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_background"/> <!-- Set margin to 0 -->
 
-        <!-- Toast Button at the top -->
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#fff043"
+        android:text="0"
+        android:textSize="120sp"
+        android:gravity="center"
+        android:textColor="#3f51b5"
+        android:layout_margin="0dp" /> <!-- Set margin to 0 -->
 
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Count"
+        android:layout_weight="1"
+        android:background="#3f51b5"
+        app:cornerRadius="0dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="0dp" /> <!-- Set margin to 0 -->
 
-        <!-- TextView occupying space between buttons with blue background -->
-        <TextView
-            android:id="@+id/show_count"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#fff043"
-            android:text="0"
-            android:textSize="120sp"
-            android:gravity="center"
-            android:textColor="#3f51b5" /> <!-- Optional: White text color for contrast -->
-        <Button
-            android:id="@+id/button_toast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/button_background"
-            android:text="Toast" />
-        <!-- Count Button at the bottom -->
-        <Button
-            android:id="@+id/button_count"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/button_background"
-            android:text="Count" />
-
-    </FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
